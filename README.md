@@ -1,4 +1,4 @@
-# Docker Compose - OCARIoT Deployment
+# Docker Compose 
 
 Repository with the necessary settings to enable [Percona Server for MongoDB](https://www.percona.com/doc/percona-server-for-mongodb/LATEST/index.html) encryption at rest integrated with [Vault Hashicorp](https://www.vaultproject.io/docs/).
 

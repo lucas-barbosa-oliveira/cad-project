@@ -37,6 +37,9 @@ services:
     ports:
       - 8200:8200
     volumes:
+      - type: bind
+        source: ./config/vault/.keys
+        target: /etc/vault/.keys
       - type: volume
         source: vault-data
         target: /tmp/vault-data
