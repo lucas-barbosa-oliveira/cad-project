@@ -1,6 +1,21 @@
 version: '3.7'
 
 services:
+  rabbitmq:
+    container_name: cad-rabbitmq
+    image: rabbitmq:3.7.28-management
+    ports:
+      - 15672:15672
+      - 5672:5672
+    depends_on:
+      - vault
+    networks:
+      - cad-net
+    logging:
+      driver: json-file
+      options:
+        max-size: 100m
+
   psmdb:
     container_name: cad-psmdb
     image: percona/percona-server-mongodb:4.2
